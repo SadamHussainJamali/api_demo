@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">API Demo</string>
+    <string name="two_way_edit_text">Two way edit text: </string>
+    <string name="loading">Loading...</string>
 </resources>

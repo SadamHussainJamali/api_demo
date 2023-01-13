@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 is MainActivityEventClass.ShowQuotes -> {
                     Log.i("show_quotes", event.quotes.toString())
                     //todo we can show the data into recyclerview or in other view
-                    Toast.makeText(this,viewModel.text,Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this,viewModel.text,Toast.LENGTH_LONG).show()
                 }
                 MainActivityEventClass.backButtonPressed->{
 
