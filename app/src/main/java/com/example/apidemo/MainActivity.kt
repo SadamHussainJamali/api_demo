@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
                 MainActivityEventClass.backButtonPressed->{
 
                 }
+
+                is MainActivityEventClass.ShowExceptionAndErrors-> Toast.makeText(this,
+                    event.message,Toast.LENGTH_LONG).show()
                 else -> {}
             }
         }

@@ -1,5 +1,6 @@
 package com.example.apidemo.retrofit
 import android.util.Log
+import com.example.apidemo.BuildConfig
 import com.example.apidemo.common.Result
 import okhttp3.ResponseBody
 import retrofit2.Response
@@ -8,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitObject {
 
-    private const val baseUrl = "https://quotable.io/"
+    private const val baseUrl = BuildConfig.BASE_URL
     val apiInterface = Retrofit.Builder().baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
         // we need to add converter factory to

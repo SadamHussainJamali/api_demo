@@ -39,10 +39,11 @@ class MainActivityViewModel:ViewModel() {
                     is Result.Error->{
                     //we can show Error by toast or dialog depend on the
                     // requirement of the design and the type of error.
-
+                        events.value = BaseEvent(MainActivityEventClass.ShowExceptionAndErrors(result.errorBody.body().toString()))
                     }
                    is Result.Exception->{
                     //show exception
+                   events.value = BaseEvent(MainActivityEventClass.ShowExceptionAndErrors(result.exception.localizedMessage?:"Api Exception with no message"))
                    }
                 }
             }catch (e:Exception){
