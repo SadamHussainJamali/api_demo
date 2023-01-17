@@ -9,7 +9,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.apidemo.databinding.ActivityMainBinding
+import com.example.apidemo.di.ApplicationClass
 import com.example.apidemo.ui.MainActivityEventClass
+import com.example.apidemo.ui.MainActivityViewModelFactory
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,11 +20,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var viewModel:MainActivityViewModel
 
+     @Inject
+     lateinit var viewModelFactory:MainActivityViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        viewModel =  ViewModelProvider(this)[MainActivityViewModel::class.java]
+
+        (application as ApplicationClass).applicationComponent.inject(this )
+
+        viewModel =  ViewModelProvider(this,viewModelFactory )[MainActivityViewModel::class.java]
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 

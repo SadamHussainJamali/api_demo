@@ -3,13 +3,14 @@ package com.example.apidemo
 import com.example.apidemo.common.Result
 import com.example.apidemo.pojo_class.Quotes
 import com.google.gson.Gson
+import javax.inject.Inject
 
-class DemoUseCaseForAPI {
+class DemoUseCaseForAPI @Inject constructor(val repository:DemoRepository) {
 
 
     //we can provide repositories and other dependencies using dependencies-injection like dagger,
     // hilt or using other provider. but I am not using it for this demo.
-    val repository = DemoRepository()
+
     val gson = Gson()
 
     /*if some manipulation is needed we can do here before passing data to viewModel

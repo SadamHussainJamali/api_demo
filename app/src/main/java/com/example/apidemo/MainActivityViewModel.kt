@@ -9,10 +9,11 @@ import com.example.apidemo.common.Result
 import com.example.apidemo.pojo_class.Quotes
 import com.example.apidemo.ui.MainActivityEventClass
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainActivityViewModel:ViewModel() {
+class MainActivityViewModel @Inject constructor(val getQuotesUseCase:DemoUseCaseForAPI):ViewModel() {
     //in real project we provide repository using dagger
-    val getQuotesUseCase = DemoUseCaseForAPI()
+
 
     private val events = MutableLiveData<BaseEvent<MainActivityEventClass>>()
     val eventsObs:LiveData<BaseEvent<MainActivityEventClass>> = events

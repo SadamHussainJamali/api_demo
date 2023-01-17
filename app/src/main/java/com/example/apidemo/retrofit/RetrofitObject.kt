@@ -6,17 +6,9 @@ import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
-object RetrofitObject {
-
-    private const val baseUrl = BuildConfig.BASE_URL
-    val apiInterface = Retrofit.Builder().baseUrl(baseUrl)
-        .addConverterFactory(GsonConverterFactory.create())
-        // we need to add converter factory to
-        // convert JSON object to Java object
-        .build().create(RetrofitApiRequests::class.java)
-
-
+class  RetrofitObject @Inject constructor(val apiInterface:RetrofitApiRequests) {
 
     suspend inline fun get(
         endpoint: String, //end point
