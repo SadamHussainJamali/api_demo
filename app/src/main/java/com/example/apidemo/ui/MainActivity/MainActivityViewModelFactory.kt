@@ -1,9 +1,8 @@
-package com.example.apidemo.ui
+package com.example.apidemo.ui.MainActivity
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.apidemo.DemoUseCaseForAPI
-import com.example.apidemo.MainActivityViewModel
+import com.example.apidemo.usecases.DemoUseCaseForAPI
 import javax.inject.Inject
 
 class MainActivityViewModelFactory @Inject constructor(val getQuotesUseCase: DemoUseCaseForAPI):ViewModelProvider.Factory {

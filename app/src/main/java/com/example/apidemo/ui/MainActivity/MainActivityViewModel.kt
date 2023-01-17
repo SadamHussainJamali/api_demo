@@ -1,17 +1,17 @@
-package com.example.apidemo
+package com.example.apidemo.ui.MainActivity
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.apidemo.usecases.DemoUseCaseForAPI
 import com.example.apidemo.common.BaseEvent
 import com.example.apidemo.common.Result
 import com.example.apidemo.pojo_class.Quotes
-import com.example.apidemo.ui.MainActivityEventClass
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MainActivityViewModel @Inject constructor(val getQuotesUseCase:DemoUseCaseForAPI):ViewModel() {
+class MainActivityViewModel @Inject constructor(val getQuotesUseCase: DemoUseCaseForAPI):ViewModel() {
     //in real project we provide repository using dagger
 
 

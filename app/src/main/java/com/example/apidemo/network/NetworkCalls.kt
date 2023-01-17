@@ -1,7 +1,7 @@
 package com.example.apidemo.network
 
 import com.example.apidemo.common.Result
-import com.example.apidemo.retrofit.RetrofitObject
+import com.example.apidemo.network.retrofit.RetrofitObject
 import javax.inject.Inject
 
 

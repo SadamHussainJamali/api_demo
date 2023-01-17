@@ -1,7 +1,7 @@
-package com.example.apidemo.di
+package com.example.apidemo.di.modules
 
 import com.example.apidemo.BuildConfig
-import com.example.apidemo.retrofit.RetrofitApiRequests
+import com.example.apidemo.network.retrofit.RetrofitApiRequests
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

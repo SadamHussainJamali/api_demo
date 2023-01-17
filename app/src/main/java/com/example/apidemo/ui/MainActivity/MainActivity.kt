@@ -1,4 +1,4 @@
-package com.example.apidemo
+package com.example.apidemo.ui.MainActivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,18 +7,16 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.apidemo.databinding.ActivityMainBinding
 import com.example.apidemo.di.ApplicationClass
-import com.example.apidemo.ui.MainActivityEventClass
-import com.example.apidemo.ui.MainActivityViewModelFactory
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
 
     lateinit var binding: ActivityMainBinding
-    lateinit var viewModel:MainActivityViewModel
+    lateinit var viewModel: MainActivityViewModel
 
      @Inject
-     lateinit var viewModelFactory:MainActivityViewModelFactory
+     lateinit var viewModelFactory: MainActivityViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +46,11 @@ class MainActivity : AppCompatActivity() {
                     //todo we can show the data into recyclerview or in other view
 //                    Toast.makeText(this,viewModel.text,Toast.LENGTH_LONG).show()
                 }
-                MainActivityEventClass.backButtonPressed->{
+                MainActivityEventClass.backButtonPressed ->{
 
                 }
 
-                is MainActivityEventClass.ShowExceptionAndErrors-> Toast.makeText(this,
+                is MainActivityEventClass.ShowExceptionAndErrors -> Toast.makeText(this,
                     event.message,Toast.LENGTH_LONG).show()
                 else -> {}
             }

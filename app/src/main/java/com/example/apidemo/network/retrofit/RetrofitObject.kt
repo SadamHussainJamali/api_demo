@@ -1,14 +1,11 @@
-package com.example.apidemo.retrofit
+package com.example.apidemo.network.retrofit
 import android.util.Log
-import com.example.apidemo.BuildConfig
 import com.example.apidemo.common.Result
 import okhttp3.ResponseBody
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
-class  RetrofitObject @Inject constructor(val apiInterface:RetrofitApiRequests) {
+class  RetrofitObject @Inject constructor(val apiInterface: RetrofitApiRequests) {
 
     suspend inline fun get(
         endpoint: String, //end point

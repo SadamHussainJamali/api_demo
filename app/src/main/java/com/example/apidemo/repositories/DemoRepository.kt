@@ -1,4 +1,4 @@
-package com.example.apidemo
+package com.example.apidemo.repositories
 
 import com.example.apidemo.network.NetworkCalls
 import javax.inject.Inject

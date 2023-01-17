@@ -1,11 +1,12 @@
-package com.example.apidemo
+package com.example.apidemo.usecases
 
 import com.example.apidemo.common.Result
 import com.example.apidemo.pojo_class.Quotes
+import com.example.apidemo.repositories.DemoRepository
 import com.google.gson.Gson
 import javax.inject.Inject
 
-class DemoUseCaseForAPI @Inject constructor(val repository:DemoRepository) {
+class DemoUseCaseForAPI @Inject constructor(val repository: DemoRepository) {
 
 
     //we can provide repositories and other dependencies using dependencies-injection like dagger,

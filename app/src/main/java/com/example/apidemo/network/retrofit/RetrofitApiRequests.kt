@@ -1,4 +1,4 @@
-package com.example.apidemo.retrofit
+package com.example.apidemo.network.retrofit
 
 import okhttp3.ResponseBody
 import retrofit2.Response
