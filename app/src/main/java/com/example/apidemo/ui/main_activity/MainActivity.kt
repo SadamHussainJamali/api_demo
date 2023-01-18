@@ -1,4 +1,4 @@
-package com.example.apidemo.ui.MainActivity
+package com.example.apidemo.ui.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     //todo we can show the data into recyclerview or in other view
 //                    Toast.makeText(this,viewModel.text,Toast.LENGTH_LONG).show()
                 }
-                MainActivityEventClass.backButtonPressed ->{
+                MainActivityEventClass.BackButtonPressed ->{
 
                 }
 

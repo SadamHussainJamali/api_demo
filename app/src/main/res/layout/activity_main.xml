@@ -5,14 +5,14 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.apidemo.ui.MainActivity.MainActivityViewModel" />
+            type="com.example.apidemo.ui.main_activity.MainActivityViewModel" />
 
         <import type="android.view.View"/>
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity.MainActivity">
+    tools:context=".ui.main_activity.MainActivity">
 
     <TextView
         app:layout_constraintStart_toStartOf="parent"
