@@ -7,8 +7,11 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.apidemo.databinding.ActivityMainBinding
 import com.example.apidemo.di.ApplicationClass
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
 
@@ -22,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        (application as ApplicationClass).applicationComponent.inject(this )
 
         viewModel =  ViewModelProvider(this,viewModelFactory )[MainActivityViewModel::class.java]
         binding.lifecycleOwner = this
