@@ -1,4 +1,4 @@
-package com.example.apidemo.ui.MainActivity
+package com.example.apidemo.ui.main_activity
 
 import com.example.apidemo.pojo_class.Quotes
 
