@@ -4,10 +4,14 @@ import com.example.apidemo.BuildConfig
 import com.example.apidemo.network.retrofit.RetrofitApiRequests
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+
+@InstallIn(SingletonComponent::class)
 @Module
 class  NetworkModule {
 
