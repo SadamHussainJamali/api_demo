@@ -43,10 +43,28 @@ class EditTextField(context: Context, attrs: AttributeSet) : ConstraintLayout(co
 
     private var text: String? = null
         set(value) {
-            binding.inputField?.setText(field ?: "")
+            binding.inputField?.setText(value ?: "")
             field = value
         }
         get() = binding.inputField.text.toString()
+
+    private var hint:String?=null
+    set(value) {
+        binding.inputField.hint =value
+    }
+
+
+    private var error:String?=null
+    set(value) {
+        if (value?.isNotEmpty() == true){
+            binding.error.visibility = VISIBLE
+            binding.error.text = value
+        }
+        else
+            binding.error.visibility = GONE
+
+        field = value
+    }
 
     init {
         val layoutInflater =
@@ -58,5 +76,8 @@ class EditTextField(context: Context, attrs: AttributeSet) : ConstraintLayout(co
         inputType = typedArray.getString(R.styleable.EditTextFieldAttrs_input_type)
         title = typedArray.getString(R.styleable.EditTextFieldAttrs_title)
         text = typedArray.getString(R.styleable.EditTextFieldAttrs_text)
+        error = typedArray.getString(R.styleable.EditTextFieldAttrs_error)
+        hint =typedArray.getString(R.styleable.EditTextFieldAttrs_hint)
+
     }
 }
